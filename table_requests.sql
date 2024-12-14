@@ -1,7 +1,6 @@
 -- 1. Регистрация пользователя с указанием роли (проверка уникальности email)
 INSERT INTO User (id, name, email, role, password)
-VALUES (6, 'Бородин Матвей', 'borodin@edu.hse.ru', 'student', 'pass321')
-ON CONFLICT (email) DO NOTHING; -- Предотвращение дублирования email
+VALUES (6, 'Бородин Матвей', 'borodin@edu.hse.ru', 'student', 'pass321');
 
 -- 2. Авторизация пользователя по email и паролю
 SELECT id, name, role FROM User
